@@ -1,7 +1,7 @@
 import time
 
-link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
-
+# link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer"
 
 def test_guest_should_see_button_add_to_basket(browser):
     browser.get(link)
@@ -10,4 +10,4 @@ def test_guest_should_see_button_add_to_basket(browser):
     # print( btnToBasket )
     assert len(
         btnToBasket) == 1, "Too much buttons or button isn't exist"  # если кнопок с таким селектором больше 1 или они отсутствуют падает
-    time.sleep(30)
+    # time.sleep(30)
