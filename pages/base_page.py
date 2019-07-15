@@ -1,4 +1,6 @@
 import math
+import time
+
 from selenium.common.exceptions import NoAlertPresentException
 
 
@@ -16,10 +18,9 @@ class BasePage(object):
         alert = self.browser.switch_to.alert
         x = alert.text.split(" ")[2]
         answer = str(math.log(abs((12 * math.sin(float(x))))))
+        alert.send_keys(answer)
+        alert.accept()
         try:
-            alert.send_keys(answer)
-            alert.accept()
-        # try:
             alert = self.browser.switch_to.alert
             print("Your code: {}".format(alert.text))
             alert.accept()
