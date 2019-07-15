@@ -1,6 +1,4 @@
-import selenium.webdriver.common.by
-
-from pages import locators
+# from pages import locators
 from selenium import webdriver
 from .base_page import BasePage
 from .locators import LoginPageLocators
