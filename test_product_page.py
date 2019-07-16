@@ -13,3 +13,4 @@ def test_guest_can_add_product_to_cart(browser):
     time.sleep(5)
     page.check_product_in_basket()
     page.check_cost_of_basket()
+    page.check_success_add_to_basket()
