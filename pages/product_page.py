@@ -25,3 +25,7 @@ class ProductPage(BasePage):
         alertinner_text = self.browser.find_elements_by_class_name("alertinner")[0].text
         assert alertinner_text == "{} has been added to your basket.".format(
             self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text), "Error adding to basket"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
