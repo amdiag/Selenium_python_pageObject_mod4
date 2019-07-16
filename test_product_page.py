@@ -11,5 +11,5 @@ def test_guest_can_add_product_to_cart(browser):
     page.click_button_add_to_basket()
     page.solve_quiz_and_get_code()
     time.sleep(5)
-    page.check_product_in_basket("The shellcoder's handbook")
-    page.check_cost_of_basket("£9.99")
+    page.check_product_in_basket()
+    page.check_cost_of_basket()
